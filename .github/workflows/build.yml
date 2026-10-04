@@ -1,11 +1,8 @@
-
-name: Build Royal Kush APK
-
+name: Build APK
 on: [push]
-
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -14,14 +11,14 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y python3-pip openjdk-17-jdk zip unzip libffi-dev libssl-dev
+          sudo apt install -y zip unzip openjdk-17-jdk
           pip install --upgrade pip
-          pip install buildozer cython
+          pip install buildozer cython==0.29.33
       - name: Build APK
         run: |
-          yes | buildozer android debug
+          buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Royal-Kush-APK
+          name: RoyalKush-APK
           path: bin/*.apk
