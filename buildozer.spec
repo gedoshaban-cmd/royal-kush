@@ -25,8 +25,8 @@ source.exclude_dirs = tests, bin, venv, .git, __pycache__
 version = 1.0.0
 
 # (list) Application requirements
-# ✅ تم إصلاح مشكلة kivy==2.3.0 وتحديد إصدار Python
-requirements = python3==3.10.12,kivy==2.3.0,cython==0.29.36,openssl,pyopenssl,android,pillow,requests
+# ✅ تم إصلاح الخطأ بحذف إصدار python3 المحدد
+requirements = python3,kivy==2.3.0,cython==0.29.36,openssl,pyopenssl,android,pillow,requests
 
 # (str) Custom source folders for requirements
 # p4a.source_dir =
