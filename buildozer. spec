@@ -1,0 +1,17 @@
+[app]
+title = رويال كوش
+package.name = royalkush
+package.domain = com.royalkush.app
+source.dir =.
+source.include_exts = py,png,jpg,kv,json
+version = 1.0
+requirements = python3,kivy,Pillow
+orientation = portrait
+android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+android.api = 33
+android.minapi = 21
+fullscreen = 0
+
+[buildozer]
+log_level = 2
+warn_on_root = 1
